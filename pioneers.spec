@@ -1,4 +1,4 @@
-%define version 0.11.1
+%define version 0.11.2
 Summary: 	Playable implementation of the Settlers of Catan 
 Name: 		pioneers
 Version: 	%version
