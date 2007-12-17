@@ -10,7 +10,6 @@ Source: 	http://prdownloads.sourceforge.net/pio/%{name}-%{version}.tar.gz
 Source1: 	http://prdownloads.sourceforge.net/pio/%{name}-%{version}.sig
 Source2:	pioneers-0.9.55-icons.tar.bz2
 Patch: pioneers-0.11.3-desktopentry.patch
-BuildRoot: 	%_tmppath/%{name}-%version-root
 BuildRequires:  libgnome2-devel
 BuildRequires:  gtk+2-devel
 BuildRequires:  scrollkeeper
