@@ -80,35 +80,6 @@ computer player that can take part in Pioneers games.
 rm -rf $RPM_BUILD_ROOT %name.lang
 %makeinstall_std
 %find_lang %name --with-gnome
-install -d -m 755 $RPM_BUILD_ROOT%{_menudir}
-cat >$RPM_BUILD_ROOT%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-	command="%{_bindir}/%{name}"\
-	needs="X11"\
-	section="More Applications/Games/Boards"\
-	icon="%name.png"\
-	title="Pioneers"\
-	longtitle="Pioneers game client" \
-	startup_notify="true" xdg="true"
-?package(%{name}): \
-	command="%{_bindir}/%{name}-editor"\
-	needs="X11"\
-	section="More Applications/Games/Boards"\
-	icon="%name-editor.png"\
-	title="Pioneers Editor"\
-	longtitle="Pioneers map editor" \
-	startup_notify="true" xdg="true"
-EOF
-cat >$RPM_BUILD_ROOT%{_menudir}/%{name}-server-gtk <<EOF
-?package(%{name}-server-gtk): \
-	command="%{_bindir}/%{name}-server-gtk"\
-	needs="X11"\
-	section="More Applications/Games/Boards"\
-	icon="%name-server.png"\
-	title="Pioneers Server"\
-	longtitle="Pioneers GUI server" \
-	startup_notify="true" xdg="true"
-EOF
 desktop-file-install --vendor="" \
   --add-category="X-MandrivaLinux-MoreApplications-Games-Boards" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
@@ -152,7 +123,6 @@ if [ -x %_bindir/scrollkeeper-update ]; then %_bindir/scrollkeeper-update -q || 
 %_iconsdir/%name-editor.png
 %_liconsdir/%name-editor.png
 %_miconsdir/%name-editor.png
-%_menudir/%name
 
 %files server-console
 %defattr(-,root,root)
@@ -172,7 +142,6 @@ if [ -x %_bindir/scrollkeeper-update ]; then %_bindir/scrollkeeper-update -q || 
 %_iconsdir/%name-server.png
 %_liconsdir/%name-server.png
 %_miconsdir/%name-server.png
-%_menudir/%name-server-gtk
 
 %files server-data
 %defattr(-,root,root)
