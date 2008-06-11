@@ -89,11 +89,11 @@ cp -r icons %buildroot%_datadir/
 rm -rf %buildroot
 
 %post
-if [ -x %_bindir/scrollkeeper-update ]; then %_bindir/scrollkeeper-update -q || true ; fi
+%update_scrollkeeper
 %update_menus
 
 %postun
-if [ -x %_bindir/scrollkeeper-update ]; then %_bindir/scrollkeeper-update -q || true ; fi
+%clean_scrollkeeper
 %clean_menus
 
 %post server-gtk
