@@ -88,19 +88,27 @@ cp -r icons %buildroot%_datadir/
 %clean
 rm -rf %buildroot
 
+%if %mdkversion < 200900
 %post
 %update_scrollkeeper
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_scrollkeeper
 %clean_menus
+%endif
 
+%if %mdkversion < 200900
 %post server-gtk
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun server-gtk
 %clean_menus
+%endif
 
 %files -f %name.lang
 %defattr(-,root,root)
