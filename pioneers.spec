@@ -1,7 +1,7 @@
 Summary: 	Playable implementation of the Settlers of Catan 
 Name: 		pioneers
 Version: 	0.12.2
-Release: %mkrel 1
+Release: %mkrel 2
 Group: 		Games/Boards
 License: 	GPL
 Url: 		http://pio.sourceforge.net/
