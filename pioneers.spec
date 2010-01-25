@@ -1,15 +1,14 @@
 Summary: 	Playable implementation of the Settlers of Catan 
 Name: 		pioneers
-Version: 	0.12.2
-Release: %mkrel 3
+Version: 	0.12.3
+Release: %mkrel 1
 Group: 		Games/Boards
 License: 	GPLv2+
 Url: 		http://pio.sourceforge.net/
-Source: 	http://prdownloads.sourceforge.net/pio/%{name}-%{version}.tar.gz
-Source1: 	http://prdownloads.sourceforge.net/pio/%{name}-%{version}.sig
+Source: 	http://downloads.sourceforge.net/project/pio/Source/%{name}-%{version}.tar.gz
 Source2:	pioneers-0.9.55-icons.tar.bz2
 Patch: pioneers-0.12.1-desktopentry.patch
-Patch1: pioneers-0.12.2-format-strings.patch
+Patch1: pioneers-0.12.3-format-strings.patch
 BuildRoot: 	%_tmppath/%{name}-%version-root
 BuildRequires:  libgnome2-devel
 BuildRequires:  gtk+2-devel
@@ -71,7 +70,7 @@ computer player that can take part in Pioneers games.
 %prep
 %setup -q -a 2
 %patch -p1
-%patch1 -p1
+%patch1 -p1 -b .format-strings
 
 %build
 %configure2_5x
@@ -114,7 +113,7 @@ rm -rf %buildroot
 
 %files -f %name.lang
 %defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog INSTALL README
+%doc AUTHORS ChangeLog README
 %{_bindir}/pioneers
 %{_bindir}/pioneers-editor
 %{_datadir}/applications/pioneers.desktop
@@ -125,6 +124,7 @@ rm -rf %buildroot
 %dir %{_datadir}/games/pioneers
 %{_datadir}/games/pioneers/themes/
 %{_mandir}/man6/pioneers.6*
+%{_mandir}/man6/pioneers-editor.6*
 %_datadir/omf/pioneers
 %_iconsdir/%name.png
 %_liconsdir/%name.png
@@ -135,7 +135,7 @@ rm -rf %buildroot
 
 %files server-console
 %defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog INSTALL README
+%doc README
 %{_bindir}/pioneers-server-console
 %{_bindir}/pioneers-meta-server
 %{_mandir}/man6/pioneers-server-console.6*
@@ -143,7 +143,7 @@ rm -rf %buildroot
 
 %files server-gtk
 %defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog INSTALL README
+%doc README
 %{_bindir}/pioneers-server-gtk
 %{_datadir}/applications/pioneers-server.desktop
 %{_mandir}/man6/pioneers-server-gtk.6*
@@ -154,7 +154,7 @@ rm -rf %buildroot
 
 %files server-data
 %defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog INSTALL README
+%doc README
 %{_bindir}/pioneersai
 %{_mandir}/man6/pioneersai.6*
 %dir %{_datadir}/games/pioneers
