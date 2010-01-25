@@ -14,6 +14,7 @@ BuildRequires:  libgnome2-devel
 BuildRequires:  gtk+2-devel
 BuildRequires:  scrollkeeper
 BuildRequires:  desktop-file-utils
+BuildRequires:  intltool
 Provides: gnocatan
 Obsoletes: gnocatan
 
