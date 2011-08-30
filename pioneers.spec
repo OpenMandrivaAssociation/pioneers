@@ -8,7 +8,6 @@ Url: 		http://pio.sourceforge.net/
 Source: 	http://downloads.sourceforge.net/project/pio/Source/%{name}-%{version}.tar.gz
 Source2:	pioneers-0.9.55-icons.tar.bz2
 Patch: pioneers-0.12.1-desktopentry.patch
-Patch1: pioneers-0.12.3-format-strings.patch
 BuildRoot: 	%_tmppath/%{name}-%version-root
 BuildRequires:  libgnome2-devel
 BuildRequires:  gtk+2-devel
@@ -70,8 +69,8 @@ computer player that can take part in Pioneers games.
 
 %prep
 %setup -q -a 2
-%patch -p1
-%patch1 -p1 -b .format-strings
+%apply_patches
+
 
 %build
 %configure2_5x
