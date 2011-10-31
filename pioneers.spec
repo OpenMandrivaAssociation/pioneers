@@ -1,6 +1,6 @@
 Summary: 	Playable implementation of the Settlers of Catan 
 Name: 		pioneers
-Version: 	0.12.4
+Version: 	0.12.5
 Release: %mkrel 1
 Group: 		Games/Boards
 License: 	GPLv2+
@@ -11,6 +11,10 @@ Patch: pioneers-0.12.1-desktopentry.patch
 BuildRoot: 	%_tmppath/%{name}-%version-root
 BuildRequires:  libgnome2-devel
 BuildRequires:  gtk+2-devel
+%if %mdvver >= 201200
+BuildRequires:  libnotify-devel >= 0.7.4
+%endif
+BuildRequires:  avahi-client-devel
 BuildRequires:  scrollkeeper
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
