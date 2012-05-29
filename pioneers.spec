@@ -129,6 +129,8 @@ rm -rf %buildroot
 %{_datadir}/games/pioneers/themes/
 %{_mandir}/man6/pioneers.6*
 %{_mandir}/man6/pioneers-editor.6*
+%_datadir/icons/hicolor/*/apps/pioneers.*
+%_datadir/icons/hicolor/*/apps/pioneers-editor.*
 %_iconsdir/%name.png
 %_liconsdir/%name.png
 %_miconsdir/%name.png
@@ -151,6 +153,7 @@ rm -rf %buildroot
 %{_datadir}/applications/pioneers-server.desktop
 %{_mandir}/man6/pioneers-server-gtk.6*
 %_datadir/pixmaps/%name-server.png
+%_datadir/icons/hicolor/*/apps/pioneers-server.*
 %_iconsdir/%name-server.png
 %_liconsdir/%name-server.png
 %_miconsdir/%name-server.png
