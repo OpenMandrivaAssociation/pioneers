@@ -129,7 +129,6 @@ rm -rf %buildroot
 %{_datadir}/games/pioneers/themes/
 %{_mandir}/man6/pioneers.6*
 %{_mandir}/man6/pioneers-editor.6*
-%_datadir/omf/pioneers
 %_iconsdir/%name.png
 %_liconsdir/%name.png
 %_miconsdir/%name.png
