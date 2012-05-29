@@ -129,6 +129,9 @@ rm -rf %buildroot
 %{_datadir}/games/pioneers/themes/
 %{_mandir}/man6/pioneers.6*
 %{_mandir}/man6/pioneers-editor.6*
+%if %mdvver <= 201100
+%_datadir/omf/pioneers
+%endif
 %_datadir/icons/hicolor/*/apps/pioneers.*
 %_datadir/icons/hicolor/*/apps/pioneers-editor.*
 %_iconsdir/%name.png
