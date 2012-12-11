@@ -1,0 +1,42 @@
+--- pioneers-0.12.1/client/gtk/pioneers.desktop.in~	2008-02-13 15:10:40.000000000 -0500
++++ pioneers-0.12.1/client/gtk/pioneers.desktop.in	2008-04-27 17:22:23.125043643 -0400
+@@ -1,10 +1,9 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ _Name=Pioneers
+ _Comment=Play a game of Pioneers
+ Exec=pioneers
+-Icon=pioneers.png
++Icon=pioneers
+ Terminal=false
+ Type=Application
+ Categories=Game;BoardGame;GNOME;GTK;
+--- pioneers-0.12.1/editor/gtk/pioneers-editor.desktop.in~	2008-02-13 15:09:52.000000000 -0500
++++ pioneers-0.12.1/editor/gtk/pioneers-editor.desktop.in	2008-04-27 17:23:07.825044314 -0400
+@@ -1,10 +1,9 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ _Name=Pioneers Editor
+ _Comment=Create your own game for Pioneers
+ Exec=pioneers-editor
+-Icon=pioneers-editor.png
++Icon=pioneers-editor
+ Terminal=false
+ Type=Application
+ Categories=Game;BoardGame;GNOME;GTK;
+--- pioneers-0.12.1/server/gtk/pioneers-server.desktop.in~	2008-02-13 15:10:13.000000000 -0500
++++ pioneers-0.12.1/server/gtk/pioneers-server.desktop.in	2008-04-27 17:23:42.061043067 -0400
+@@ -1,10 +1,9 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ _Name=Pioneers Server
+ _Comment=Host a game of Pioneers
+ Exec=pioneers-server-gtk
+-Icon=pioneers-server.png
++Icon=pioneers-server
+ Terminal=false
+ Type=Application
+ Categories=Game;BoardGame;GNOME;GTK;
