@@ -9,10 +9,10 @@ Source: 	http://downloads.sourceforge.net/project/pio/Source/%{name}-%{version}.
 Source2:	pioneers-0.9.55-icons.tar.bz2
 Patch: pioneers-0.12.1-desktopentry.patch
 BuildRoot: 	%_tmppath/%{name}-%version-root
-BuildRequires:  libgnome2-devel
+BuildRequires:  pkgconfig(libgnome-2.0)
 BuildRequires:  gtk+2-devel
 %if %mdvver >= 201200
-BuildRequires:  libnotify-devel >= 0.7.4
+BuildRequires:  pkgconfig(libnotify) >= 0.7.4
 %endif
 BuildRequires:  avahi-client-devel
 BuildRequires:  scrollkeeper
