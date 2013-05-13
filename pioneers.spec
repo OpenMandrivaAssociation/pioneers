@@ -1,14 +1,13 @@
 Summary: 	Playable implementation of the Settlers of Catan 
 Name: 		pioneers
 Version: 	14.1
-Release: %mkrel 1
+Release: 2
 Group: 		Games/Boards
 License: 	GPLv2+
 Url: 		http://pio.sourceforge.net/
 Source: 	http://downloads.sourceforge.net/project/pio/Source/%{name}-%{version}.tar.gz
 Source2:	pioneers-0.9.55-icons.tar.bz2
 Patch: pioneers-0.12.1-desktopentry.patch
-BuildRoot: 	%_tmppath/%{name}-%version-root
 BuildRequires:  pkgconfig(libgnome-2.0)
 BuildRequires:  gtk+2-devel
 %if %mdvver >= 201200
