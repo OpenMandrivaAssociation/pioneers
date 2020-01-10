@@ -70,7 +70,7 @@ computer player that can take part in Pioneers games.
 
 %prep
 %setup -q -a 2
-%apply_patches
+%autopatch -p1
 
 
 %build
