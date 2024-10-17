@@ -4,7 +4,7 @@ Version: 	15.1
 Release:        2
 Group: 		Games/Boards
 License: 	GPLv2+
-Url: 		http://pio.sourceforge.net/
+Url: 		https://pio.sourceforge.net/
 Source: 	http://downloads.sourceforge.net/project/pio/Source/%{name}-%{version}.tar.gz
 Source2:	pioneers-0.9.55-icons.tar.bz2
 Patch: pioneers-0.12.1-desktopentry.patch
